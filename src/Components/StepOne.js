@@ -1,7 +1,31 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import User from "../images/avatar1.png";
+
 export default class StepOne extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstname: "",
+      lastname: "",
+      dob: "",
+      email: "",
+      sex: "",
+      matrimony: "",
+      mobileno: "",
+      dateofjoining: "",
+      permanentaddress: "",
+      presentaddress: "",
+      photo: "",
+    };
+
+    this.handleAll1 = this.handleAll1.bind(this);
+  }
+
+  handleAll1 = (event) => {
+    this.setState({ [event.target.name]: [event.target.value] });
+  };
+
   render() {
     return (
       <>
@@ -14,15 +38,51 @@ export default class StepOne extends Component {
                 <div>
                   <p>First Name</p>
 
-                  <input type="text" name="fname" placeholder="Firstname" />
+                  <input
+                    type="text"
+                    name="firstname"
+                    value={this.state.firstname}
+                    onChange={this.handleAll1}
+                    // onChange={(event) => {
+                    //   this.setState({ firstname: event.target.value });
+                    // }}
+                    placeholder="Firstname"
+                  />
 
                   <p>Last Name</p>
-                  <input type="text" name="lname" placeholder="Lastname" />
+                  <input
+                    type="text"
+                    name="lastname"
+                    value={this.state.lastname}
+                    onChange={this.handleAll1}
+                    // onChange={(event) => {
+                    //   this.setState({ lastname: event.target.value });
+                    // }}
+                    placeholder="Lastname"
+                  />
+
                   <p>Date Of Birth</p>
-                  <input type="date" />
+                  <input
+                    type="date"
+                    name="dob"
+                    value={this.state.dob}
+                    onChange={this.handleAll1}
+                    // onChange={(event) => {
+                    //   this.setState({ dob: event.target.value });
+                    // }}
+                  />
 
                   <p>E-mail Address</p>
-                  <input type="email" name="email" placeholder="e-mail" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleAll1}
+                    // onChange={(event) => {
+                    //   this.setState({ email: event.target.value });
+                    // }}
+                    placeholder="e-mail"
+                  />
                 </div>
               </Col>
               <Col className="col-md-3 offset-md-1">
@@ -30,7 +90,17 @@ export default class StepOne extends Component {
                   <div className="upload-button">
                     <img src={User} alt="" />
                   </div>
-                  <input className="file-upload" type="file" accept="image/*" />
+                  <input
+                    className="file-upload"
+                    type="file"
+                    name="photo"
+                    value={this.state.photo}
+                    onChange={this.handleAll1}
+                    // onChange={(event) => {
+                    //   this.setState({ photo: event.target.value });
+                    // }}
+                    accept="image/*"
+                  />
                 </div>
               </Col>
             </Row>
@@ -42,7 +112,16 @@ export default class StepOne extends Component {
               <Col className="col-md-3">
                 <div className="checklsbel">
                   <label>
-                    <input type="radio" name="check"></input>Male
+                    <input
+                      type="radio"
+                      name="sex"
+                      value="male"
+                      onChange={(e) => this.setState({ sex: e.target.value })}
+                      // onChange={(event) => {
+                      //   this.setState({ sex: event.target.value });
+                      // }}
+                    ></input>
+                    Male
                   </label>
                 </div>
               </Col>
@@ -50,8 +129,16 @@ export default class StepOne extends Component {
               <Col className="col-md-3">
                 <div className="checklsbel">
                   <label>
-                    {" "}
-                    <input type="radio" name="check"></input>Female
+                    <input
+                      type="radio"
+                      name="sex"
+                      value={this.state.sex}
+                      onChange={this.handleAll1}
+                      // onChange={(event) => {
+                      //   this.setState({ sex: event.target.value });
+                      // }}
+                    ></input>
+                    Female
                   </label>
                 </div>
               </Col>
@@ -65,7 +152,16 @@ export default class StepOne extends Component {
               <Col className="col-md-3">
                 <div className="checklsbel">
                   <label>
-                    <input type="radio" name="check"></input>Married
+                    <input
+                      type="radio"
+                      name="matrimony"
+                      value={this.state.matrimony}
+                      onChange={this.handleAll1}
+                      // onChange={(event) => {
+                      //   this.setState({ matrimony: event.target.value });
+                      // }}
+                    ></input>
+                    Married
                   </label>
                 </div>
               </Col>
@@ -73,14 +169,32 @@ export default class StepOne extends Component {
               <Col className="col-md-3">
                 <div className="checklsbel">
                   <label>
-                    <input type="radio" name="check"></input>Unmarried
+                    <input
+                      type="radio"
+                      name="matrimony"
+                      value={this.state.matrimony}
+                      onChange={this.handleAll1}
+                      // onChange={(event) => {
+                      //   this.setState({ matrimony: event.target.value });
+                      // }}
+                    ></input>
+                    Single
                   </label>
                 </div>
               </Col>
               <Col className="col-md-3">
                 <div className="checklsbel">
                   <label>
-                    <input type="radio" name="check"></input>Divorced
+                    <input
+                      type="radio"
+                      name="matrimony"
+                      value={this.state.matrimony}
+                      onChange={this.handleAll1}
+                      // onChange={(event) => {
+                      //   this.setState({ matrimony: event.target.value });
+                      // }}
+                    ></input>
+                    Divorced
                   </label>
                 </div>
               </Col>
@@ -89,35 +203,71 @@ export default class StepOne extends Component {
             <Row>
               <Col>
                 <p>Mobile No.</p>
-                <input type="number" name="phone" placeholder="Enter Number" />
+                <input
+                  type="number"
+                  name="mobileno"
+                  value={this.state.mobileno}
+                  onChange={this.handleAll1}
+                  // onChange={(event) => {
+                  //   this.setState({ mobileno: event.target.value });
+                  // }}
+                  placeholder="Enter Number"
+                />
               </Col>
             </Row>
 
             <Row>
               <Col>
                 <p>Date Of Joining</p>
-                <input type="date" />
+                <input
+                  type="date"
+                  name="dateofjoining"
+                  value={this.state.dateofjoining}
+                  onChange={this.handleAll1}
+                  // onChange={(event) => {
+                  //   this.setState({ dateofjoining: event.target.value });
+                  // }}
+                />
               </Col>
             </Row>
 
             <Row>
               <Col>
                 <p>Present Address</p>
-                <textarea></textarea>
+                <textarea
+                  name="presentaddress"
+                  value={this.state.presentaddress}
+                  onChange={this.handleAll1}
+                  // onChange={(event) => {
+                  //   this.setState({ presentaddress: event.target.value });
+                  // }}
+                ></textarea>
               </Col>
             </Row>
 
             <Row>
               <Col>
                 <p>Permanent Address</p>
-                <textarea ></textarea>
-                
+                <textarea
+                  name="permanentaddress"
+                  value={this.state.permanentaddress}
+                  onChange={this.handleAll1}
+                  // onChange={(event) => {
+                  //   this.setState({ permanentaddress: event.target.value });
+                  // }}
+                ></textarea>
               </Col>
             </Row>
 
             <Row className="mt-5">
               <Col className="text-center">
-                <input type="Submit" name="sbmt" />
+                <button
+                  onClick={() => {
+                    this.props.steponetotwo(this.state);
+                  }}
+                >
+                  Next
+                </button>
               </Col>
             </Row>
           </Container>

@@ -23,6 +23,32 @@ export default class Form1 extends Component {
       type: type,
     });
   };
+
+  step2(e) {
+    console.log("final", e);
+  }
+
+  steponetotwo = (item) => {
+    console.log(item);
+    this.setState({ type: "steptwo", Form1: item });
+  };
+
+  steptwoprops = (item) => {
+    this.setState({ type: "stepthree", Form2: item });
+  };
+
+  stepthreetofour = (item) => {
+    this.setState({ type: "stepfour", Form3: item });
+  };
+
+  stepfourtofive = (item) => {
+    this.setState({ type: "thankyou", Form4: item });
+  };
+
+  // thanktocomp = (item) => {
+  //   this.setState({ type: "complete", Form5: item });
+  // };
+
   render() {
     return (
       <>
@@ -113,12 +139,49 @@ export default class Form1 extends Component {
 
         <div className="loginBox">
           <form>
-            {this.state.type === "stepone" ? <StepOne /> : ""}
-            {this.state.type === "steptwo" ? <StepTwo /> : ""}
-            {this.state.type === "stepthree" ? <StepFour /> : ""}
-            {this.state.type === "stepfour" ? <StepThree /> : ""}
-            {this.state.type === "thankyou" ? <Thankyou /> : ""}
-            {this.state.type === "complete" ? <Complete /> : ""}
+            {this.state.type === "stepone" ? (
+              <StepOne steponetotwo={this.steponetotwo} />
+            ) : (
+              ""
+            )}
+            {this.state.type === "steptwo" ? (
+              <StepTwo
+                formValue={this.state.Form1}
+                steptwoprops={this.steptwoprops}
+              />
+            ) : (
+              ""
+            )}
+            {this.state.type === "stepthree" ? (
+              <StepFour
+                formValue={this.state.Form2}
+                stepthreetofour={this.stepthreetofour}
+              />
+            ) : (
+              ""
+            )}
+            {this.state.type === "stepfour" ? (
+              <StepThree
+                formValue={this.state.Form3}
+                stepfourtofive={this.stepfourtofive}
+              />
+            ) : (
+              ""
+            )}
+            {this.state.type === "thankyou" ? (
+              <Thankyou
+              // formValue={this.state.Form4}
+              // thanktocomp={this.thanktocomp}
+              />
+            ) : (
+              ""
+            )}
+
+            {/* {this.state.type === "complete" ? (
+              <Complete formValue={this.state.Form5 } />
+            ) : (
+              ""
+            )} */}
           </form>
         </div>
       </>
