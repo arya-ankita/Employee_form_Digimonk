@@ -45,9 +45,9 @@ export default class Form1 extends Component {
     this.setState({ type: "thankyou", Form4: item });
   };
 
-  // thanktocomp = (item) => {
-  //   this.setState({ type: "complete", Form5: item });
-  // };
+  thanktocomp = (item) => {
+    this.setState({ type: "complete", Form5: item });
+  };
 
   render() {
     return (
@@ -101,7 +101,7 @@ export default class Form1 extends Component {
                   <li>
                     <NavLink
                       to="#"
-                      onClick={this.ChangeTab("stepthree")}
+                      // onClick={this.ChangeTab("stepthree")}
                       activeClassName={
                         this.state.type === "stepthree" ? "stepactive" : ""
                       }
@@ -112,7 +112,7 @@ export default class Form1 extends Component {
                   <li>
                     <NavLink
                       to="#"
-                      onClick={this.ChangeTab("stepfour")}
+                      // onClick={this.ChangeTab("stepfour")}
                       activeClassName={
                         this.state.type === "stepfour" ? "stepactive" : ""
                       }
@@ -123,7 +123,7 @@ export default class Form1 extends Component {
                   <li>
                     <NavLink
                       to="#"
-                      onClick={this.ChangeTab("thankyou")}
+                      // onClick={this.ChangeTab("thankyou")}
                       activeClassName={
                         this.state.type === "thankyou" ? "stepactive" : ""
                       }
@@ -164,6 +164,7 @@ export default class Form1 extends Component {
               <StepThree
                 formValue={this.state.Form3}
                 stepfourtofive={this.stepfourtofive}
+                // onClickn1={this.onClickn1}
               />
             ) : (
               ""
@@ -172,6 +173,7 @@ export default class Form1 extends Component {
               <Thankyou
               // formValue={this.state.Form4}
               // thanktocomp={this.thanktocomp}
+              // onClickn1={this.onClickn1};
               />
             ) : (
               ""

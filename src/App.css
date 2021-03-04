@@ -226,7 +226,6 @@ form a {
   border-radius: 15px;
 }
 
-
 .Bar ul {
   margin: 0%;
   padding: 0%;
@@ -250,7 +249,7 @@ form a {
   font-size: 28px;
   width: 40px;
   height: 40px;
- border-radius: 100%; 
+  border-radius: 100%;
   background: #ccc;
   display: inline-block;
   line-height: 42px;
@@ -270,426 +269,388 @@ form a {
   position: absolute;
 }
 
-
 /*  */
- .moon {
-            position: absolute;
-            width: 170px;
-            height: 170px;
-            background-color: #EAEAEA;
-            border-radius: 100%;
-            top: 8vh;
-            left: 60vw;
-            box-shadow: inset -15px 0 6px #BFBFBF, 0 0 8px #EAEAEA;
-        }
-
-        .stars {
-            position: absolute;
-            background: white;
-            width: 2px;
-            height: 2px;
-            border-radius: 50%;
-            box-shadow: 70px 170px 2px white, 70px 170px 2px white, 70px 170px 2px white,
-                70px 170px 2px white, 70px 170px 2px white,
-
-                390px 160px 2px white, 390px 160px 2px white, 390px 160px 2px white,
-                390px 160px 2px white, 390px 160px 2px white,
-
-                400px 250px 2px white, 400px 250px 2px white, 400px 250px 2px white,
-                400px 250px 2px white, 400px 250px 2px white,
-
-                710px 40px 2px white, 710px 40px 2px white, 710px 40px 2px white,
-                710px 40px 2px white, 710px 40px 2px white,
-
-                310px 450px 2px white, 310px 450px 2px white, 310px 450px 2px white,
-                310px 450px 2px white, 310px 450px 2px white,
-
-                510px 460px 2px white, 510px 460px 2px white, 510px 460px 2px white,
-                510px 460px 2px white, 510px 460px 2px white,
-
-                410px 200px 2px white, 410px 200px 2px white, 410px 200px 2px white,
-                410px 200px 2px white, 410px 200px 2px white,
-
-                810px 480px 2px white, 810px 480px 2px white, 810px 480px 2px white,
-                810px 480px 2px white, 810px 480px 2px white,
-
-                10px 150px 2px white, 10px 150px 2px white, 10px 150px 2px white,
-                10px 150px 2px white, 10px 150px 2px white,
-
-                610px 20px 2px white, 610px 20px 2px white, 610px 20px 2px white,
-                610px 20px 2px white, 610px 20px 2px white,
-
-                630px 210px 2px white, 630px 210px 2px white, 630px 210px 2px white,
-                630px 210px 2px white, 630px 210px 2px white,
-
-                40px 420px 2px white, 40px 420px 2px white, 40px 420px 2px white,
-                40px 420px 2px white, 40px 420px 2px white,
-
-                1030px 230px 2px white, 1030px 230px 2px white, 1030px 230px 2px white,
-                1030px 230px 2px white, 1030px 230px 2px white,
-
-
-                1010px 20px 2px white, 1010px 20px 2px white, 1010px 20px 2px white,
-                1010px 20px 2px white, 1010px 20px 2px white,
-
-
-                210px 50px 2px white, 210px 50px 2px white, 210px 50px 2px white,
-                210px 50px 2px white, 210px 50px 2px white,
-
-
-                1040px 20px 2px white, 1040px 20px 2px white, 1040px 20px 2px white,
-                1040px 20px 2px white, 1040px 20px 2px white,
-
-
-                310px 270px 2px white, 310px 270px 2px white, 310px 270px 2px white,
-                310px 270px 2px white, 310px 270px 2px white,
-
-
-                210px 480px 2px white, 210px 480px 2px white, 210px 480px 2px white,
-                210px 480px 2px white, 210px 480px 2px white,
-
-
-                1040px 480px 2px white, 1040px 480px 2px white, 1040px 480px 2px white,
-                1040px 480px 2px white, 1040px 480px 2px white,
-
-                10px 30px 2px white, 10px 30px 2px white, 10px 30px 2px white,
-                10px 30px 2px white, 10px 30px 2px white,
-
-
-                200px 100px 2px white, 200px 100px 2px white, 200px 100px 2px white,
-                200px 100px 2px white, 200px 100px 2px white,
-
-
-                390px 500px 2px white, 390px 500px 2px white, 390px 500px 2px white,
-                390px 500px 2px white, 390px 500px 2px white,
-
-
-                480px 300px 2px white, 480px 300px 2px white, 480px 300px 2px white,
-                480px 300px 2px white, 480px 300px 2px white,
-
-                /*
-170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
-170px 300px 2px white, 170px 300px 2px white,*/
-
-
-                320px 500px 2px white, 320px 500px 2px white, 320px 500px 2px white,
-                320px 500px 2px white, 320px 500px 2px white,
-
-
-                630px 300px 2px white, 630px 300px 2px white, 630px 300px 2px white,
-                630px 300px 2px white, 630px 300px 2px white,
-
-
-                240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
-                240px 300px 2px white, 240px 300px 2px white;
-            animation: star 10s;
-            animation-iteration-count: 2;
-            animation-delay: 2s;
-
-
-        }
-
-        @keyframes star {
-            50% {
-                box-shadow:
-                    /* 150px 200px 2px white, 150px 200px 2px white, 150px 200px 2px white,
-                150px 200px 2px white, 150px 200px 2px white,
-
-                160px 190px 2px white, 160px 190px 2px white, 160px 190px 2px white,
-                160px 190px 2px white, 160px 190px 2px white, 
-
-                170px 180px 2px white, 170px 180px 2px white, 170px 180px 2px white,
-                170px 180px 2px white, 170px 180px 2px white, */
-
-                    180px 170px 2px white, 180px 170px 2px white, 180px 170px 2px white,
-                    180px 170px 2px white, 180px 170px 2px white,
-
-                    190px 160px 2px white, 190px 160px 2px white, 190px 160px 2px white,
-                    190px 160px 2px white, 190px 160px 2px white,
-
-                    200px 150px 2px white, 200px 150px 2px white, 200px 150px 2px white,
-                    200px 150px 2px white, 200px 150px 2px white,
-
-                    210px 140px 2px white, 210px 140px 2px white, 210px 140px 2px white,
-                    210px 140px 2px white, 210px 140px 2px white,
-
-                    210px 150px 2px white, 210px 150px 2px white, 210px 150px 2px white,
-                    210px 150px 2px white, 210px 150px 2px white,
-
-                    210px 160px 2px white, 210px 160px 2px white, 210px 160px 2px white,
-                    210px 160px 2px white, 210px 160px 2px white,
-
-                    210px 170px 2px white, 210px 170px 2px white, 210px 170px 2px white,
-                    210px 170px 2px white, 210px 170px 2px white,
-
-                    210px 180px 2px white, 210px 180px 2px white, 210px 180px 2px white,
-                    210px 180px 2px white, 210px 180px 2px white,
-
-                    210px 190px 2px white, 210px 190px 2px white, 210px 190px 2px white,
-                    210px 190px 2px white, 210px 190px 2px white,
-
-                    210px 200px 2px white, 210px 200px 2px white, 210px 200px 2px white,
-                    210px 200px 2px white, 210px 200px 2px white,
-
-                    210px 210px 2px white, 210px 210px 2px white, 210px 210px 2px white,
-                    210px 210px 2px white, 210px 210px 2px white,
-
-                    210px 220px 2px white, 210px 220px 2px white, 210px 220px 2px white,
-                    210px 220px 2px white, 210px 220px 2px white,
-
-                    210px 230px 2px white, 210px 230px 2px white, 210px 230px 2px white,
-                    210px 230px 2px white, 210px 230px 2px white,
-
-
-                    210px 240px 2px white, 210px 240px 2px white, 210px 240px 2px white,
-                    210px 240px 2px white, 210px 240px 2px white,
-
-
-                    210px 250px 2px white, 210px 250px 2px white, 210px 250px 2px white,
-                    210px 250px 2px white, 210px 250px 2px white,
-
-
-                    210px 260px 2px white, 210px 260px 2px white, 210px 260px 2px white,
-                    210px 260px 2px white, 210px 260px 2px white,
-
-
-                    210px 270px 2px white, 210px 270px 2px white, 210px 270px 2px white,
-                    210px 270px 2px white, 210px 270px 2px white,
-
-
-                    210px 280px 2px white, 210px 280px 2px white, 210px 280px 2px white,
-                    210px 280px 2px white, 210px 280px 2px white,
-
-
-                    210px 290px 2px white, 210px 290px 2px white, 210px 290px 2px white,
-                    210px 290px 2px white, 210px 290px 2px white,
-
-
-                    210px 300px 2px white, 210px 300px 2px white, 210px 300px 2px white,
-                    210px 300px 2px white, 210px 300px 2px white,
-
-
-                    200px 300px 2px white, 200px 300px 2px white, 200px 300px 2px white,
-                    200px 300px 2px white, 200px 300px 2px white,
-
-
-                    190px 300px 2px white, 190px 300px 2px white, 190px 300px 2px white,
-                    190px 300px 2px white, 190px 300px 2px white,
-
-
-                    180px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
-                    180px 300px 2px white, 180px 300px 2px white,
-
-                    /*
-170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
-170px 300px 2px white, 170px 300px 2px white,*/
-
-
-                    220px 300px 2px white, 220px 300px 2px white, 220px 300px 2px white,
-                    220px 300px 2px white, 220px 300px 2px white,
-
-
-                    230px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
-                    230px 300px 2px white, 230px 300px 2px white,
-
-
-                    240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
-                    240px 300px 2px white, 240px 300px 2px white;
-            }
-
-            100% {
-                box-shadow:
-                    /* 150px 200px 2px white, 150px 200px 2px white, 150px 200px 2px white,
-                150px 200px 2px white, 150px 200px 2px white,
-
-                160px 190px 2px white, 160px 190px 2px white, 160px 190px 2px white,
-                160px 190px 2px white, 160px 190px 2px white, 
-
-                170px 180px 2px white, 170px 180px 2px white, 170px 180px 2px white,
-                170px 180px 2px white, 170px 180px 2px white, */
-
-                    180px 170px 2px white, 180px 170px 2px white, 180px 170px 2px white,
-                    180px 170px 2px white, 180px 170px 2px white,
-
-                    190px 160px 2px white, 190px 160px 2px white, 190px 160px 2px white,
-                    190px 160px 2px white, 190px 160px 2px white,
-
-                    200px 150px 2px white, 200px 150px 2px white, 200px 150px 2px white,
-                    200px 150px 2px white, 200px 150px 2px white,
-
-                    210px 140px 2px white, 210px 140px 2px white, 210px 140px 2px white,
-                    210px 140px 2px white, 210px 140px 2px white,
-
-                    210px 150px 2px white, 210px 150px 2px white, 210px 150px 2px white,
-                    210px 150px 2px white, 210px 150px 2px white,
-
-                    210px 160px 2px white, 210px 160px 2px white, 210px 160px 2px white,
-                    210px 160px 2px white, 210px 160px 2px white,
-
-                    210px 170px 2px white, 210px 170px 2px white, 210px 170px 2px white,
-                    210px 170px 2px white, 210px 170px 2px white,
-
-                    210px 180px 2px white, 210px 180px 2px white, 210px 180px 2px white,
-                    210px 180px 2px white, 210px 180px 2px white,
-
-                    210px 190px 2px white, 210px 190px 2px white, 210px 190px 2px white,
-                    210px 190px 2px white, 210px 190px 2px white,
-
-                    210px 200px 2px white, 210px 200px 2px white, 210px 200px 2px white,
-                    210px 200px 2px white, 210px 200px 2px white,
-
-                    210px 210px 2px white, 210px 210px 2px white, 210px 210px 2px white,
-                    210px 210px 2px white, 210px 210px 2px white,
-
-                    210px 220px 2px white, 210px 220px 2px white, 210px 220px 2px white,
-                    210px 220px 2px white, 210px 220px 2px white,
-
-                    210px 230px 2px white, 210px 230px 2px white, 210px 230px 2px white,
-                    210px 230px 2px white, 210px 230px 2px white,
-
-
-                    210px 240px 2px white, 210px 240px 2px white, 210px 240px 2px white,
-                    210px 240px 2px white, 210px 240px 2px white,
-
-
-                    210px 250px 2px white, 210px 250px 2px white, 210px 250px 2px white,
-                    210px 250px 2px white, 210px 250px 2px white,
-
-
-                    210px 260px 2px white, 210px 260px 2px white, 210px 260px 2px white,
-                    210px 260px 2px white, 210px 260px 2px white,
-
-
-                    210px 270px 2px white, 210px 270px 2px white, 210px 270px 2px white,
-                    210px 270px 2px white, 210px 270px 2px white,
-
-
-                    210px 280px 2px white, 210px 280px 2px white, 210px 280px 2px white,
-                    210px 280px 2px white, 210px 280px 2px white,
-
-
-                    210px 290px 2px white, 210px 290px 2px white, 210px 290px 2px white,
-                    210px 290px 2px white, 210px 290px 2px white,
-
-
-                    210px 300px 2px white, 210px 300px 2px white, 210px 300px 2px white,
-                    210px 300px 2px white, 210px 300px 2px white,
-
-
-                    200px 300px 2px white, 200px 300px 2px white, 200px 300px 2px white,
-                    200px 300px 2px white, 200px 300px 2px white,
-
-
-                    190px 300px 2px white, 190px 300px 2px white, 190px 300px 2px white,
-                    190px 300px 2px white, 190px 300px 2px white,
-
-
-                    180px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
-                    180px 300px 2px white, 180px 300px 2px white,
-
-                    /*
-170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
-170px 300px 2px white, 170px 300px 2px white,*/
-
-
-                    220px 300px 2px white, 220px 300px 2px white, 220px 300px 2px white,
-                    220px 300px 2px white, 220px 300px 2px white,
-
-
-                    230px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
-                    230px 300px 2px white, 230px 300px 2px white,
-
-
-                    240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
-                    240px 300px 2px white, 240px 300px 2px white;
-            }
-        }
-
-        .star2 {
-            position: absolute;
-            height: 170px;
-            width: 130px;
-            border: dotted;
-            border-radius: 50%;
-            border-color: white;
-            border-width: 5px;
-            left: 260px;
-            top: 130px;
-            animation: star2 10s 2;
-            animation-delay: 2s;
-            opacity: 0;
-        }
-
-        .star3 {
-            position: absolute;
-            height: 170px;
-            width: 130px;
-            border: dotted;
-            border-radius: 50%;
-            border-color: white;
-            border-width: 5px;
-            left: 420px;
-            top: 130px;
-            animation: star2 10s 2;
-            animation-delay: 2s;
-            opacity: 0;
-        }
-
-        @keyframes star2 {
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 1;
-            }
-
-        }
-
-        .craters {
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            height: 30px;
-            width: 30px;
-            background: #BFBFBF;
-            border-radius: 50%;
-            box-shadow: inset -1px 0 1px #9E9E9E;
-            opacity: 0.4;
-        }
-
-        .craters:before {
-            top: -8px;
-            right: -25px;
-            position: absolute;
-            content: "";
-            height: 15px;
-            width: 25px;
-            box-shadow: inset -1px 0 1px #9E9E9E;
-        }
-.overbox {
-    background: -webkit-linear-gradient(90deg, #C04848 10%, #480048 90%);
-    height: 100vh;
-    width:100%
+.moon {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background-color: #eaeaea;
+  border-radius: 100%;
+  top: 8vh;
+  left: 60vw;
+  box-shadow: inset -15px 0 6px #bfbfbf, 0 0 8px #eaeaea;
 }
- .container1 {
-            position: relative;
-            
-        }
-        .craters:after {
-            top: 30px;
-            position: absolute;
-            content: "";
-            left: 30px;
-            height: 10px;
-            width: 10px;
-            box-shadow: inset -1px 0 1px #9E9E9E;
-        }
 
-        .thank {
-            position: absolute;
-            top: 3rem;
-            opacity: 0;
-            animation: star2 10s 2;
-            animation-delay: 2s;
-        }
+.stars {
+  position: absolute;
+  background: white;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow: 70px 170px 2px white, 70px 170px 2px white, 70px 170px 2px white,
+    70px 170px 2px white, 70px 170px 2px white, 390px 160px 2px white,
+    390px 160px 2px white, 390px 160px 2px white, 390px 160px 2px white,
+    390px 160px 2px white, 400px 250px 2px white, 400px 250px 2px white,
+    400px 250px 2px white, 400px 250px 2px white, 400px 250px 2px white,
+    710px 40px 2px white, 710px 40px 2px white, 710px 40px 2px white,
+    710px 40px 2px white, 710px 40px 2px white, 310px 450px 2px white,
+    310px 450px 2px white, 310px 450px 2px white, 310px 450px 2px white,
+    310px 450px 2px white, 510px 460px 2px white, 510px 460px 2px white,
+    510px 460px 2px white, 510px 460px 2px white, 510px 460px 2px white,
+    410px 200px 2px white, 410px 200px 2px white, 410px 200px 2px white,
+    410px 200px 2px white, 410px 200px 2px white, 810px 480px 2px white,
+    810px 480px 2px white, 810px 480px 2px white, 810px 480px 2px white,
+    810px 480px 2px white, 10px 150px 2px white, 10px 150px 2px white,
+    10px 150px 2px white, 10px 150px 2px white, 10px 150px 2px white,
+    610px 20px 2px white, 610px 20px 2px white, 610px 20px 2px white,
+    610px 20px 2px white, 610px 20px 2px white, 630px 210px 2px white,
+    630px 210px 2px white, 630px 210px 2px white, 630px 210px 2px white,
+    630px 210px 2px white, 40px 420px 2px white, 40px 420px 2px white,
+    40px 420px 2px white, 40px 420px 2px white, 40px 420px 2px white,
+    1030px 230px 2px white, 1030px 230px 2px white, 1030px 230px 2px white,
+    1030px 230px 2px white, 1030px 230px 2px white, 1010px 20px 2px white,
+    1010px 20px 2px white, 1010px 20px 2px white, 1010px 20px 2px white,
+    1010px 20px 2px white, 210px 50px 2px white, 210px 50px 2px white,
+    210px 50px 2px white, 210px 50px 2px white, 210px 50px 2px white,
+    1040px 20px 2px white, 1040px 20px 2px white, 1040px 20px 2px white,
+    1040px 20px 2px white, 1040px 20px 2px white, 310px 270px 2px white,
+    310px 270px 2px white, 310px 270px 2px white, 310px 270px 2px white,
+    310px 270px 2px white, 210px 480px 2px white, 210px 480px 2px white,
+    210px 480px 2px white, 210px 480px 2px white, 210px 480px 2px white,
+    1040px 480px 2px white, 1040px 480px 2px white, 1040px 480px 2px white,
+    1040px 480px 2px white, 1040px 480px 2px white, 10px 30px 2px white,
+    10px 30px 2px white, 10px 30px 2px white, 10px 30px 2px white,
+    10px 30px 2px white, 200px 100px 2px white, 200px 100px 2px white,
+    200px 100px 2px white, 200px 100px 2px white, 200px 100px 2px white,
+    390px 500px 2px white, 390px 500px 2px white, 390px 500px 2px white,
+    390px 500px 2px white, 390px 500px 2px white, 480px 300px 2px white,
+    480px 300px 2px white, 480px 300px 2px white, 480px 300px 2px white,
+    480px 300px 2px white,
+    /*
+170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
+170px 300px 2px white, 170px 300px 2px white,*/
+      320px 500px 2px white,
+    320px 500px 2px white, 320px 500px 2px white, 320px 500px 2px white,
+    320px 500px 2px white, 630px 300px 2px white, 630px 300px 2px white,
+    630px 300px 2px white, 630px 300px 2px white, 630px 300px 2px white,
+    240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
+    240px 300px 2px white, 240px 300px 2px white;
+  animation: star 10s;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+}
+
+@keyframes star {
+  50% {
+    box-shadow:
+                    /* 150px 200px 2px white, 150px 200px 2px white, 150px 200px 2px white,
+                150px 200px 2px white, 150px 200px 2px white,
+
+                160px 190px 2px white, 160px 190px 2px white, 160px 190px 2px white,
+                160px 190px 2px white, 160px 190px 2px white, 
+
+                170px 180px 2px white, 170px 180px 2px white, 170px 180px 2px white,
+                170px 180px 2px white, 170px 180px 2px white, */ 180px
+        170px 2px white,
+      180px 170px 2px white, 180px 170px 2px white, 180px 170px 2px white,
+      180px 170px 2px white, 190px 160px 2px white, 190px 160px 2px white,
+      190px 160px 2px white, 190px 160px 2px white, 190px 160px 2px white,
+      200px 150px 2px white, 200px 150px 2px white, 200px 150px 2px white,
+      200px 150px 2px white, 200px 150px 2px white, 210px 140px 2px white,
+      210px 140px 2px white, 210px 140px 2px white, 210px 140px 2px white,
+      210px 140px 2px white, 210px 150px 2px white, 210px 150px 2px white,
+      210px 150px 2px white, 210px 150px 2px white, 210px 150px 2px white,
+      210px 160px 2px white, 210px 160px 2px white, 210px 160px 2px white,
+      210px 160px 2px white, 210px 160px 2px white, 210px 170px 2px white,
+      210px 170px 2px white, 210px 170px 2px white, 210px 170px 2px white,
+      210px 170px 2px white, 210px 180px 2px white, 210px 180px 2px white,
+      210px 180px 2px white, 210px 180px 2px white, 210px 180px 2px white,
+      210px 190px 2px white, 210px 190px 2px white, 210px 190px 2px white,
+      210px 190px 2px white, 210px 190px 2px white, 210px 200px 2px white,
+      210px 200px 2px white, 210px 200px 2px white, 210px 200px 2px white,
+      210px 200px 2px white, 210px 210px 2px white, 210px 210px 2px white,
+      210px 210px 2px white, 210px 210px 2px white, 210px 210px 2px white,
+      210px 220px 2px white, 210px 220px 2px white, 210px 220px 2px white,
+      210px 220px 2px white, 210px 220px 2px white, 210px 230px 2px white,
+      210px 230px 2px white, 210px 230px 2px white, 210px 230px 2px white,
+      210px 230px 2px white, 210px 240px 2px white, 210px 240px 2px white,
+      210px 240px 2px white, 210px 240px 2px white, 210px 240px 2px white,
+      210px 250px 2px white, 210px 250px 2px white, 210px 250px 2px white,
+      210px 250px 2px white, 210px 250px 2px white, 210px 260px 2px white,
+      210px 260px 2px white, 210px 260px 2px white, 210px 260px 2px white,
+      210px 260px 2px white, 210px 270px 2px white, 210px 270px 2px white,
+      210px 270px 2px white, 210px 270px 2px white, 210px 270px 2px white,
+      210px 280px 2px white, 210px 280px 2px white, 210px 280px 2px white,
+      210px 280px 2px white, 210px 280px 2px white, 210px 290px 2px white,
+      210px 290px 2px white, 210px 290px 2px white, 210px 290px 2px white,
+      210px 290px 2px white, 210px 300px 2px white, 210px 300px 2px white,
+      210px 300px 2px white, 210px 300px 2px white, 210px 300px 2px white,
+      200px 300px 2px white, 200px 300px 2px white, 200px 300px 2px white,
+      200px 300px 2px white, 200px 300px 2px white, 190px 300px 2px white,
+      190px 300px 2px white, 190px 300px 2px white, 190px 300px 2px white,
+      190px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
+      180px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
+      /*
+170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
+170px 300px 2px white, 170px 300px 2px white,*/
+        220px 300px 2px white,
+      220px 300px 2px white, 220px 300px 2px white, 220px 300px 2px white,
+      220px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
+      230px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
+      240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
+      240px 300px 2px white, 240px 300px 2px white;
+  }
+
+  100% {
+    box-shadow:
+                    /* 150px 200px 2px white, 150px 200px 2px white, 150px 200px 2px white,
+                150px 200px 2px white, 150px 200px 2px white,
+
+                160px 190px 2px white, 160px 190px 2px white, 160px 190px 2px white,
+                160px 190px 2px white, 160px 190px 2px white, 
+
+                170px 180px 2px white, 170px 180px 2px white, 170px 180px 2px white,
+                170px 180px 2px white, 170px 180px 2px white, */ 180px
+        170px 2px white,
+      180px 170px 2px white, 180px 170px 2px white, 180px 170px 2px white,
+      180px 170px 2px white, 190px 160px 2px white, 190px 160px 2px white,
+      190px 160px 2px white, 190px 160px 2px white, 190px 160px 2px white,
+      200px 150px 2px white, 200px 150px 2px white, 200px 150px 2px white,
+      200px 150px 2px white, 200px 150px 2px white, 210px 140px 2px white,
+      210px 140px 2px white, 210px 140px 2px white, 210px 140px 2px white,
+      210px 140px 2px white, 210px 150px 2px white, 210px 150px 2px white,
+      210px 150px 2px white, 210px 150px 2px white, 210px 150px 2px white,
+      210px 160px 2px white, 210px 160px 2px white, 210px 160px 2px white,
+      210px 160px 2px white, 210px 160px 2px white, 210px 170px 2px white,
+      210px 170px 2px white, 210px 170px 2px white, 210px 170px 2px white,
+      210px 170px 2px white, 210px 180px 2px white, 210px 180px 2px white,
+      210px 180px 2px white, 210px 180px 2px white, 210px 180px 2px white,
+      210px 190px 2px white, 210px 190px 2px white, 210px 190px 2px white,
+      210px 190px 2px white, 210px 190px 2px white, 210px 200px 2px white,
+      210px 200px 2px white, 210px 200px 2px white, 210px 200px 2px white,
+      210px 200px 2px white, 210px 210px 2px white, 210px 210px 2px white,
+      210px 210px 2px white, 210px 210px 2px white, 210px 210px 2px white,
+      210px 220px 2px white, 210px 220px 2px white, 210px 220px 2px white,
+      210px 220px 2px white, 210px 220px 2px white, 210px 230px 2px white,
+      210px 230px 2px white, 210px 230px 2px white, 210px 230px 2px white,
+      210px 230px 2px white, 210px 240px 2px white, 210px 240px 2px white,
+      210px 240px 2px white, 210px 240px 2px white, 210px 240px 2px white,
+      210px 250px 2px white, 210px 250px 2px white, 210px 250px 2px white,
+      210px 250px 2px white, 210px 250px 2px white, 210px 260px 2px white,
+      210px 260px 2px white, 210px 260px 2px white, 210px 260px 2px white,
+      210px 260px 2px white, 210px 270px 2px white, 210px 270px 2px white,
+      210px 270px 2px white, 210px 270px 2px white, 210px 270px 2px white,
+      210px 280px 2px white, 210px 280px 2px white, 210px 280px 2px white,
+      210px 280px 2px white, 210px 280px 2px white, 210px 290px 2px white,
+      210px 290px 2px white, 210px 290px 2px white, 210px 290px 2px white,
+      210px 290px 2px white, 210px 300px 2px white, 210px 300px 2px white,
+      210px 300px 2px white, 210px 300px 2px white, 210px 300px 2px white,
+      200px 300px 2px white, 200px 300px 2px white, 200px 300px 2px white,
+      200px 300px 2px white, 200px 300px 2px white, 190px 300px 2px white,
+      190px 300px 2px white, 190px 300px 2px white, 190px 300px 2px white,
+      190px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
+      180px 300px 2px white, 180px 300px 2px white, 180px 300px 2px white,
+      /*
+170px 300px 2px white, 170px 300px 2px white, 170px 300px 2px white,
+170px 300px 2px white, 170px 300px 2px white,*/
+        220px 300px 2px white,
+      220px 300px 2px white, 220px 300px 2px white, 220px 300px 2px white,
+      220px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
+      230px 300px 2px white, 230px 300px 2px white, 230px 300px 2px white,
+      240px 300px 2px white, 240px 300px 2px white, 240px 300px 2px white,
+      240px 300px 2px white, 240px 300px 2px white;
+  }
+}
+
+.star2 {
+  position: absolute;
+  height: 170px;
+  width: 130px;
+  border: dotted;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 5px;
+  left: 260px;
+  top: 130px;
+  animation: star2 10s 2;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+.star3 {
+  position: absolute;
+  height: 170px;
+  width: 130px;
+  border: dotted;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 5px;
+  left: 420px;
+  top: 130px;
+  animation: star2 10s 2;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes star2 {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.craters {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 30px;
+  width: 30px;
+  background: #bfbfbf;
+  border-radius: 50%;
+  box-shadow: inset -1px 0 1px #9e9e9e;
+  opacity: 0.4;
+}
+
+.craters:before {
+  top: -8px;
+  right: -25px;
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 25px;
+  box-shadow: inset -1px 0 1px #9e9e9e;
+}
+.overbox {
+  background: -webkit-linear-gradient(90deg, #c04848 10%, #480048 90%);
+  height: 100vh;
+  width: 100%;
+}
+.container1 {
+  position: relative;
+}
+.craters:after {
+  top: 30px;
+  position: absolute;
+  content: "";
+  left: 30px;
+  height: 10px;
+  width: 10px;
+  box-shadow: inset -1px 0 1px #9e9e9e;
+}
+
+.thank {
+  position: absolute;
+  top: 3rem;
+  opacity: 0;
+  animation: star2 10s 2;
+  animation-delay: 2s;
+}
+
+/* ============================LOGIN PAGE================================= */
+
+.login {
+  background-image: linear-gradient(to left top, #eb386d, #da4b0d);
+  width: 100%;
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainlg {
+  padding: 15px;
+  background: rgb(0 0 0 / 24%);
+  width: 40%;
+  height: 430px;
+  border-radius: 23px;
+}
+
+.form-group {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.mainlg .form-control {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 0px;
+}
+
+.mainlg img{
+  display: block;
+  position: relative;
+  align-items: center;
+}
+
+button.btn-false.btn-login {
+  /* size: 20px; */
+  color: violet;
+  width: 100px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 23px;
+  background: #0c062180;
+  height: 42px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 54px;
+}
+
+
+/* =============Forgot Password=============== */
+
+.cc{
+  padding: 15px;
+  background: rgb(0 0 0 / 24%);
+  width: 40%;
+  height: 430px;
+  border-radius: 23px;
+}
+
+.keys {
+    width: 50px;
+    height: 50px;
+    border-radius: 32px;
+    background-color: ivory;
+    text-align: center;
+    font-size: 33px;
+}
+
+.centerdiv img{
+  display: inline-block;
+
+}
+.centerdiv{
+  text-align: center;
+  width: 100%;
+
+
+}
+
+
+.formicon {
+    position: relative;
+}
+
+.formicon svg {
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.formicon input.form-control {
+    padding-left: 30px;
+}

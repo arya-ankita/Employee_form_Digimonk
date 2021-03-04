@@ -6,16 +6,19 @@ export default class StepTwo extends Component {
     super(props);
 
     this.state = {
-      validation: false,
+      file1: "",
       Text: [
         {
           Name: "highschool",
+          Value: "highschool",
         },
         {
           Name: "highersecondry",
+          Value: "highersecondry",
         },
         {
           Name: "graduation",
+          Value: "graduation",
         },
         {
           Name: "postgraduation",
@@ -26,8 +29,10 @@ export default class StepTwo extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props);
+    console.log("name", this.props);
   };
+
+  
 
   mouse = (e) => {
     e.preventDefault();
@@ -48,8 +53,10 @@ export default class StepTwo extends Component {
 
   next = (Name) => (event) => {
     console.log("HHHHhhhhh");
+    this.setState({ [event.target.name]: [event.target.value] });
     try {
       let files = event.target.files;
+      console.warn("data file", files);
       let reader = new FileReader();
       reader.readAsDataURL(files[0]);
       reader.onload = (e) => {
@@ -73,9 +80,9 @@ export default class StepTwo extends Component {
                     <p>{c.Name}</p>
                     <input
                       type="file"
-                      value=""
-                      name={c.Name.replace(" ", "")}
-                      onChange={this.next(c.Name.replace(" ", ""))}
+                      value={this.state.name}
+                      name={c.Name}
+                      onChange={this.next(c.Name)}
                     ></input>
                   </Col>
                 </Row>
@@ -83,7 +90,14 @@ export default class StepTwo extends Component {
             ))}
             <Row className="mt-5">
               <Col md="12" className="text-center">
-                <button onClick={() => this.props.steptwoprops(this.state)}>
+                <button
+                  onClick={() =>
+                    this.props.steptwoprops({
+                      step2Data: this.state,
+                      step1Data: this.props.formValue,
+                    })
+                  }
+                >
                   Next
                 </button>
               </Col>
