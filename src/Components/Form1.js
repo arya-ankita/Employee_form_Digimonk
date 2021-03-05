@@ -8,7 +8,8 @@ import StepTwo from "./StepTwo";
 import StepFour from "./StepThree";
 import Thankyou from "./Thankyou";
 import { NavLink } from "react-router-dom";
-import Complete from "./Complete";
+// import Complete from "./Complete";
+import axios from "axios";
 
 export default class Form1 extends Component {
   constructor(props) {
@@ -29,7 +30,8 @@ export default class Form1 extends Component {
   }
 
   steponetotwo = (item) => {
-    console.log(item);
+    console.log("Object received", item);
+
     this.setState({ type: "steptwo", Form1: item });
   };
 
@@ -49,6 +51,53 @@ export default class Form1 extends Component {
     this.setState({ type: "complete", Form5: item });
   };
 
+  finalsubmit = (e) => {
+    e.preventDefault();
+    console.log("final form submitted", this.state.Form1);
+
+    const data = {
+      firstname: this.state.Form1.firstname,
+      lastname: this.state.Form1.lastname,
+      dob: this.state.Form1.dob,
+      email: this.state.Form1.email,
+      sex: this.state.Form1.sex,
+      matrimony: "",
+      mobileno: "",
+      dateofjoining: "",
+      permanentaddress: "",
+      presentaddress: "",
+      photo: "",
+      highschool: "",
+      highersecondry: "",
+      graduation: "",
+      postgraduation: "",
+      bankname: "",
+      ifsc: "",
+      bankaccountno: "",
+      emergencyname: "",
+      relation: "",
+      emergencycontact: "",
+      emergencyaddress: "",
+    };
+
+    console.log("Data", data);
+    try {
+      axios
+        .post("http://203.190.153.22:4010/employee-form/submit", data)
+        //   // url: "http://203.190.153.22:3002/employee-form/submit",
+        //   headers: {
+        //     "Content-type": "application/json",
+        //   },
+        //   // body: JSON.stringify(data),
+        //   data: data,
+        // })
+        .then((result) => {
+          console.log(result)
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   render() {
     return (
       <>
@@ -162,6 +211,7 @@ export default class Form1 extends Component {
             )}
             {this.state.type === "stepfour" ? (
               <StepThree
+                finalsubmit={this.finalsubmit}
                 formValue={this.state.Form3}
                 stepfourtofive={this.stepfourtofive}
                 // onClickn1={this.onClickn1}

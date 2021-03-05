@@ -10,15 +10,15 @@ export default class StepTwo extends Component {
       Text: [
         {
           Name: "highschool",
-          Value: "highschool",
+          
         },
         {
           Name: "highersecondry",
-          Value: "highersecondry",
+          
         },
         {
           Name: "graduation",
-          Value: "graduation",
+          
         },
         {
           Name: "postgraduation",

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import axios from "axios";
+
 import { responsiveFontSizes } from "@material-ui/core";
 
 export default class StepFour extends Component {
@@ -20,58 +20,6 @@ export default class StepFour extends Component {
   onClickn1 = (event) => {
     console.log("hi", event, this.state, this.props);
     event.preventDefault();
-
-    
-    const data = {
-      firstname: this.state.step4Data.firstname,
-      //     lastname: this.props.formValue.props.formValue.step1Data.lastname,
-      //     dob: this.props.formValue.props.formValue.step1Data.dob,
-      //     email: this.props.formValue.props.formValue.step1Data.email,
-      //     dateofjoining: this.props.formValue.props.formValue.step1Data
-      //       .dateofjoining,
-      //     matrimony: this.props.formValue.props.formValue.step1Data.matrimony,
-      //     mobileno: this.props.formValue.props.formValue.step1Data.mobileno,
-      //     permanentaddress: this.props.formValue.props.formValue.step1Data
-      //       .permanentaddress,
-      //     presentaddress: this.props.formValue.props.formValue.step1Data
-      //       .presentaddress,
-      //     photo: this.props.formValue.props.formValue.step1Data.photo,
-      //     sex: this.props.formValue.props.formValue.step1Data.sex,
-      //     graduation: this.props.formValue.props.formValue.step2Data.graduation,
-      //     highersecondry: this.props.formValue.props.formValue.step2Data
-      //       .highersecondry,
-      //     highschool: this.props.formValue.props.formValue.step2Data.highschool,
-      //     postgraduation: this.props.formValue.props.formValue.step2Data
-      //       .postgraduation,
-      //     bankaccountno: this.props.formValue.step3Data.bankaccountno,
-      //     bankname: this.props.formValue.step3Data.bankname,
-      //     ifsc: this.props.formValue.step3Data.ifsc,
-      emergencyname: this.state.emergencyname,
-      relation: this.state.relation,
-      contactno: this.state.contactno,
-      emergencyaddress: this.state.emergencyaddress,
-      emergencycontact: this.state.emergencycontact,
-    };
-    console.log("Data", data);
-    try {
-      axios
-        .post("http://203.190.153.22:4010/employee-form/submit", data)
-        //   // url: "http://203.190.153.22:3002/employee-form/submit",
-        //   headers: {
-        //     "Content-type": "application/json",
-        //   },
-        //   // body: JSON.stringify(data),
-        //   data: data,
-        // })
-        .then((result) => {
-          result.json().then((resp) => {
-            console.log(resp);
-            alert("added data");
-          });
-        });
-    } catch (error) {
-      console.log(error);
-    }
   };
   // onClickn1 = (event) => {
   //   event.preventDefault();
@@ -180,10 +128,7 @@ export default class StepFour extends Component {
 
               <Row className="mt-5">
                 <Col className="text-center">
-                  <input type="submit" onClick={
-                  
-this.onClickn1
-                  }></input>
+                  <input type="submit" onClick={this.props.finalsubmit}></input>
                 </Col>
               </Row>
             </form>

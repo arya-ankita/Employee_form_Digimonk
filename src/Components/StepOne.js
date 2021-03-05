@@ -28,6 +28,8 @@ export default class StepOne extends Component {
       mobilenoError: "",
       dateofjoiningError: "",
       photoError: "",
+      permanentaddressError: "",
+      presentaddressError: "",
     };
 
     this.handleAll1 = this.handleAll1.bind(this);
@@ -39,63 +41,58 @@ export default class StepOne extends Component {
 
   valid() {
     var phoneno = /^\d{10}$/;
-    if (this.state.firstname.value == "") {
+    if (this.state.firstname === "") {
       this.setState({ firstnameError: "Firstname is Empty" });
     }
-
-     if (this.state.lastname.value == "") {
+    if (this.state.lastname === "") {
       this.setState({ lastnameError: "Lastname is Empty" });
     }
-
-     if (!this.state.email.includes("@")) {
+    if (!this.state.email.includes("@")) {
       this.setState({ emailError: "Email is empty" });
     }
-
-     if (this.state.sex.value == "") {
+    if (this.state.sex === "") {
       this.setState({ sexError: "please choose your gender" });
     }
-
-     if (this.state.matrimony.value == "") {
+    if (this.state.matrimony === "") {
       this.setState({ matrimonyError: "choose your marital status" });
-    } else {
-      this.setState({ matrimonyError: "" });
     }
-
     if (!this.state.mobileno.match(phoneno)) {
-      this.setState({ mobilenoError: "" });
+      this.setState({ mobilenoError: "Fill your number" });
     }
-
-    if (this.state.dob.value == "") {
+    if (this.state.dob === "") {
       this.setState({ dobError: "Date is missing" });
     }
-
-    if (this.state.dateofjoining.value == "") {
+    if (this.state.dateofjoining === "") {
       this.setState({ dateofjoiningError: "Date is missing" });
     }
-
-    if (this.state.photo.value == "") {
+    if (this.state.photo === "") {
       this.setState({ photoError: "Upload Image" });
+    }
+    if (this.state.permanentaddress === "") {
+      this.setState({ permanentaddressError: "Fill Address" });
+    }
+    if (this.state.presentaddress === "") {
+      this.setState({ presentaddressError: "Fill present Address" });
     }
   }
 
   submit = (e) => {
     e.preventDefault();
 
-    if (this.valid()) {
-      alert("form has been submitted");
-      this.setState({
-        firstnameError: "",
-        lastnameError: "",
-        dobError: "",
-        emailError: "",
-        sexError: "",
-        matrimonyError: "",
-        mobilenoError: "",
-        dateofjoiningError: "",
-        photoError: "",
-      });
-    } else {
-      var data = {
+    this.valid();
+    if (
+      this.state.firstname !== "" &&
+      this.state.lastname !== "" &&
+      this.state.dob !== "" &&
+      this.state.email !== "" &&
+      this.state.sex !== "" &&
+      this.state.matrimony !== "" &&
+      this.state.mobileno !== "" &&
+      this.state.dateofjoining !== "" &&
+      this.state.presentaddress !== "" &&
+      this.state.permanentaddress !== ""
+    ) {
+      const obj = {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
         dob: this.state.dob,
@@ -106,15 +103,11 @@ export default class StepOne extends Component {
         dateofjoining: this.state.dateofjoining,
         permanentaddress: this.state.permanentaddress,
         presentaddress: this.state.presentaddress,
+        photo: this.state.photo,
       };
-      console.log("check data value========", data);
-      this.props.steponetotwo();
+      this.props.steponetotwo(obj);
     }
-
-    // this.props.steponetotwo();
   };
-
-  
 
   // Base-64 function
 
@@ -134,17 +127,17 @@ export default class StepOne extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    console.log("Ye google kiya", this.state);
 
     return (
       <>
         <section>
           <Container>
             <h2 className="mt-5">Personal Details</h2>
-            <Form >
+            <Form>
               <Row className="mt-5">
                 <Col className="col-md-6">
-                  {/* <div className="firsttwo"> */}
+                  
                   <div>
                     <p>First Name</p>
 
@@ -153,9 +146,7 @@ export default class StepOne extends Component {
                       name="firstname"
                       value={this.state.firstname}
                       onChange={this.handleAll1}
-                      // onChange={(event) => {
-                      //   this.setState({ firstname: event.target.value });
-                      // }}
+                      
                       placeholder="Firstname"
                     />
                     <p>{this.state.firstnameError}</p>
@@ -166,9 +157,7 @@ export default class StepOne extends Component {
                       name="lastname"
                       value={this.state.lastname}
                       onChange={this.handleAll1}
-                      // onChange={(event) => {
-                      //   this.setState({ lastname: event.target.value });
-                      // }}
+                      
                       placeholder="Lastname"
                     />
                     <p>{this.state.lastnameError}</p>
@@ -180,9 +169,7 @@ export default class StepOne extends Component {
                       value={this.state.dob}
                       onChange={this.handleAll1}
                       size="10"
-                      // onChange={(event) => {
-                      //   this.setState({ dob: event.target.value });
-                      // }}
+                      
                     />
                     <p>{this.state.dobError}</p>
 
@@ -192,9 +179,7 @@ export default class StepOne extends Component {
                       name="email"
                       value={this.state.email}
                       onChange={this.handleAll1}
-                      // onChange={(event) => {
-                      //   this.setState({ email: event.target.value });
-                      // }}
+                      
                       placeholder="e-mail"
                     />
                     <p>{this.state.emailError}</p>
@@ -216,21 +201,10 @@ export default class StepOne extends Component {
                       name="photo"
                       onChange={this.next}
                       imgExtension={[".jpg", ".gif", ".png", ".gif", ".pdf"]}
-                      // onChange={(event) => {
-                      //   this.setState({ photo: event.target.value });
-                      // }}
+                      
                     />
 
-                    {/* <ImageUploader
-                      withIcon={false}
-                      withPreview={false}
-                      label=""
-                      buttonText=""
-                      onChange={this.onDrop}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif", ".svg"]}
-                      maxFileSize={1048576}
-                      fileSizeError=" file size is too big"
-                    /> */}
+                    
                     <p>{this.state.photoError}</p>
                   </div>
                 </Col>
@@ -248,9 +222,7 @@ export default class StepOne extends Component {
                         name="sex"
                         value="male"
                         onChange={(e) => this.setState({ sex: e.target.value })}
-                        // onChange={(event) => {
-                        //   this.setState({ sex: event.target.value });
-                        // }}
+                        
                       />
                       Male
                     </label>
@@ -265,11 +237,7 @@ export default class StepOne extends Component {
                         name="sex"
                         value="female"
                         onChange={(e) => this.setState({ sex: e.target.value })}
-                        // onChange={(event) => {
-                        // onChange={this.handleAll1}
-                        // onChange={(event) => {
-                        //   this.setState({ sex: event.target.value });
-                        // }}
+                        
                       />
                       Female
                     </label>
@@ -294,10 +262,7 @@ export default class StepOne extends Component {
                         value="married"
                         onChange={() => this.setState({ matrimony: "married" })}
 
-                        // onChange={this.marriedinput}
-                        // onChange={(event) => {
-                        //   this.setState({ matrimony: event.target.value });
-                        // }}
+                        
                       ></input>
                       Married
                     </label>
@@ -312,9 +277,7 @@ export default class StepOne extends Component {
                         name="matrimony"
                         value="single"
                         onChange={() => this.setState({ matrimony: "single" })}
-                        // onChange={(event) => {
-                        //   this.setState({ matrimony: event.target.value });
-                        // }}
+                        
                       ></input>
                       Single
                     </label>
@@ -330,9 +293,7 @@ export default class StepOne extends Component {
                         onChange={() =>
                           this.setState({ matrimony: "divorced" })
                         }
-                        // onChange={(event) => {
-                        //   this.setState({ matrimony: event.target.value });
-                        // }}
+                        
                       ></input>
                       Divorced
                     </label>
@@ -342,19 +303,15 @@ export default class StepOne extends Component {
                   </div>
                 </Col>
               </Row>
-              {this.state.matrimony == "married" ? (
+              {this.state.matrimony === "married" ? (
                 <Row>
                   <Col>
-                    <p>Mobile No.</p>
+                    <p>Anniversary</p>
                     <input
-                      type="number"
-                      name="mobileno"
-                      value={this.state.mobileno}
+                      type="date"
+                      name="anniversary"
+                      value={this.state.anniversary}
                       onChange={this.handleAll1}
-                      // onChange={(event) => {
-                      //   this.setState({ mobileno: event.target.value });
-                      // }}
-                      placeholder="Enter Number"
                     />
                     <p>{this.state.mobilenoError}</p>
                   </Col>
@@ -369,9 +326,7 @@ export default class StepOne extends Component {
                     name="mobileno"
                     value={this.state.mobileno}
                     onChange={this.handleAll1}
-                    // onChange={(event) => {
-                    //   this.setState({ mobileno: event.target.value });
-                    // }}
+                    
                     placeholder="Enter Number"
                   />
                   <p>{this.state.mobilenoError}</p>
@@ -386,9 +341,7 @@ export default class StepOne extends Component {
                     name="dateofjoining"
                     value={this.state.dateofjoining}
                     onChange={this.handleAll1}
-                    // onChange={(event) => {
-                    //   this.setState({ dateofjoining: event.target.value });
-                    // }}
+                    
                   />
                   <p>{this.state.dateofjoiningError}</p>
                 </Col>
@@ -401,9 +354,7 @@ export default class StepOne extends Component {
                     name="presentaddress"
                     value={this.state.presentaddress}
                     onChange={this.handleAll1}
-                    // onChange={(event) => {
-                    //   this.setState({ presentaddress: event.target.value });
-                    // }}
+                   
                   ></textarea>
                 </Col>
               </Row>
@@ -415,16 +366,16 @@ export default class StepOne extends Component {
                     name="permanentaddress"
                     value={this.state.permanentaddress}
                     onChange={this.handleAll1}
-                    // onChange={(event) => {
-                    //   this.setState({ permanentaddress: event.target.value });
-                    // }}
+                   
                   ></textarea>
                 </Col>
               </Row>
 
               <Row className="mt-5">
                 <Col className="text-center">
-                  <button type="submit" onClick={this.submit}>Next</button>
+                  <button type="submit" onClick={this.submit}>
+                    Next
+                  </button>
                 </Col>
               </Row>
             </Form>
