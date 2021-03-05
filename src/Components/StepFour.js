@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 import { responsiveFontSizes } from "@material-ui/core";
 
 export default class StepFour extends Component {
@@ -21,36 +21,11 @@ export default class StepFour extends Component {
     console.log("hi", event, this.state, this.props);
     event.preventDefault();
   };
-  // onClickn1 = (event) => {
-  //   event.preventDefault();
-  //   console.log("hi", event);
-  //   alert("h");
-  // try {
-  //   fetch("http://203.190.153.22:3002/employee-form/submit", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(this.state),
-  //   }).then((result) => {
-  //     result.json().then((resp) => {
-  //       alert("added data");
-  //     });
-  //   });
-  // } catch (event) {
-  //   console.log(event);
-  // }
-
-  // };
 
   handleAll1 = (event) => {
     event.preventDefault();
     this.setState({ [event.target.name]: event.target.value });
   };
-
-  // componentDidMount = () => {
-  //   console.log(this.props);
-  // };
 
   render() {
     return (
@@ -128,17 +103,14 @@ export default class StepFour extends Component {
 
               <Row className="mt-5">
                 <Col className="text-center">
-                  <input type="submit" onClick={this.props.finalsubmit}></input>
+                  <input
+                    className="btn btn-dark"
+                    type="submit"
+                    onClick={this.props.finalsubmit}
+                  />
                 </Col>
               </Row>
             </form>
-            {/* <Row>
-              <Col className="text-center">
-                <button onClick={this.props.stepfourtofive(this.state)}>
-                  Next
-                </button>
-              </Col>
-            </Row> */}
           </Container>
         </section>
       </>

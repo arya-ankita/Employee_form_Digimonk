@@ -17,8 +17,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/form" component={Form1} />
-          <Route exact path="/completed" component={Complete} />
-          <Route exact path="/forgotpass" component={Forgot} />
+          <Route exact path="/thankyou" component={Thankyou} />
+         
           <Route exact path="/otp" component={Otp} />
         </Switch>
       </BrowserRouter>

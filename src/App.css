@@ -586,10 +586,18 @@ form a {
   border-radius: 0px;
 }
 
-.mainlg img{
+.mainlg img {
   display: block;
   position: relative;
   align-items: center;
+}
+
+.phone {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px rgb(115 111 111);
 }
 
 button.btn-false.btn-login {
@@ -603,16 +611,33 @@ button.btn-false.btn-login {
   height: 42px;
 }
 
+button.btn-default.btn.Ripple-parent {
+  margin-top: 39px;
+  color: #ccc;
+  border: 1px solid #ccc;
+  background-color: #343a40;
+}
+
+.aligncenter {
+  text-align: center;
+  padding-bottom: 0px;
+  padding-top: 0%;
+  color: white;
+}
+
+.aligncenter h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .logo {
   width: 50px;
   height: 50px;
   border-radius: 54px;
 }
 
-
 /* =============Forgot Password=============== */
 
-.cc{
+.cc {
   padding: 15px;
   background: rgb(0 0 0 / 24%);
   width: 40%;
@@ -621,36 +646,90 @@ button.btn-false.btn-login {
 }
 
 .keys {
-    width: 50px;
-    height: 50px;
-    border-radius: 32px;
-    background-color: ivory;
-    text-align: center;
-    font-size: 33px;
+  width: 50px;
+  height: 50px;
+  border-radius: 32px;
+  background-color: ivory;
+  text-align: center;
+  font-size: 33px;
 }
 
-.centerdiv img{
+.centerdiv img {
   display: inline-block;
-
 }
-.centerdiv{
+.centerdiv {
   text-align: center;
   width: 100%;
-
-
 }
 
-
 .formicon {
-    position: relative;
+  position: relative;
+  width: 75%;
+  margin: auto;
 }
 
 .formicon svg {
-    position: absolute;
-    left: 0;
-    top: 8px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  color: #ccc;
 }
 
 .formicon input.form-control {
-    padding-left: 30px;
+  padding-left: 30px;
+  width: 400px;
+  margin: auto;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: pink !important;
+  text-align: left !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: pink !important;
+  text-align: center !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: pink !important;
+  text-align: center !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: pink !important;
+  text-align: center !important;
+}
+
+.centerall {
+  margin: auto;
+}
+
+/* ===========POP UP============ */
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  margin: auto;
+  color: #e64549;
+}
+
+.otp-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-box input {
+  width: 50px !important;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.error {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: black;
+  text-shadow: 1px 2px 5px #ef8c96;
 }

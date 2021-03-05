@@ -56,7 +56,7 @@ export default class StepOne extends Component {
     if (this.state.matrimony === "") {
       this.setState({ matrimonyError: "choose your marital status" });
     }
-    if (!this.state.mobileno.match(phoneno)) {
+    if (!this.state.mobileno === "") {
       this.setState({ mobilenoError: "Fill your number" });
     }
     if (this.state.dob === "") {
@@ -90,7 +90,8 @@ export default class StepOne extends Component {
       this.state.mobileno !== "" &&
       this.state.dateofjoining !== "" &&
       this.state.presentaddress !== "" &&
-      this.state.permanentaddress !== ""
+      this.state.permanentaddress !== "" &&
+      this.state.photo !== ""
     ) {
       const obj = {
         firstname: this.state.firstname,
@@ -137,7 +138,6 @@ export default class StepOne extends Component {
             <Form>
               <Row className="mt-5">
                 <Col className="col-md-6">
-                  
                   <div>
                     <p>First Name</p>
 
@@ -146,10 +146,9 @@ export default class StepOne extends Component {
                       name="firstname"
                       value={this.state.firstname}
                       onChange={this.handleAll1}
-                      
                       placeholder="Firstname"
                     />
-                    <p>{this.state.firstnameError}</p>
+                    <div className="error">{this.state.firstnameError}</div>
 
                     <p>Last Name</p>
                     <input
@@ -157,10 +156,9 @@ export default class StepOne extends Component {
                       name="lastname"
                       value={this.state.lastname}
                       onChange={this.handleAll1}
-                      
                       placeholder="Lastname"
                     />
-                    <p>{this.state.lastnameError}</p>
+                    <div classNAme="error">{this.state.lastnameError}</div>
 
                     <p>Date Of Birth</p>
                     <input
@@ -169,9 +167,8 @@ export default class StepOne extends Component {
                       value={this.state.dob}
                       onChange={this.handleAll1}
                       size="10"
-                      
                     />
-                    <p>{this.state.dobError}</p>
+                    <div className="error">{this.state.dobError}</div>
 
                     <p>E-mail Address</p>
                     <input
@@ -179,10 +176,9 @@ export default class StepOne extends Component {
                       name="email"
                       value={this.state.email}
                       onChange={this.handleAll1}
-                      
                       placeholder="e-mail"
                     />
-                    <p>{this.state.emailError}</p>
+                    <div className="error">{this.state.emailError}</div>
                   </div>
                 </Col>
 
@@ -200,12 +196,10 @@ export default class StepOne extends Component {
                       value={this.state.photo}
                       name="photo"
                       onChange={this.next}
-                      imgExtension={[".jpg", ".gif", ".png", ".gif", ".pdf"]}
-                      
+                      imgextension={[".jpg", ".gif", ".png", ".gif", ".pdf"]}
                     />
 
-                    
-                    <p>{this.state.photoError}</p>
+                    <div className="error">{this.state.photoError}</div>
                   </div>
                 </Col>
               </Row>
@@ -222,7 +216,6 @@ export default class StepOne extends Component {
                         name="sex"
                         value="male"
                         onChange={(e) => this.setState({ sex: e.target.value })}
-                        
                       />
                       Male
                     </label>
@@ -237,14 +230,13 @@ export default class StepOne extends Component {
                         name="sex"
                         value="female"
                         onChange={(e) => this.setState({ sex: e.target.value })}
-                        
                       />
                       Female
                     </label>
                   </div>
-                  <div>
-                    <p>{this.state.sexError}</p>
-                  </div>
+                </Col>
+                <Col md="12">
+                  <div className="error">{this.state.sexError}</div>
                 </Col>
               </Row>
 
@@ -261,8 +253,6 @@ export default class StepOne extends Component {
                         name="matrimony"
                         value="married"
                         onChange={() => this.setState({ matrimony: "married" })}
-
-                        
                       ></input>
                       Married
                     </label>
@@ -277,7 +267,6 @@ export default class StepOne extends Component {
                         name="matrimony"
                         value="single"
                         onChange={() => this.setState({ matrimony: "single" })}
-                        
                       ></input>
                       Single
                     </label>
@@ -293,14 +282,13 @@ export default class StepOne extends Component {
                         onChange={() =>
                           this.setState({ matrimony: "divorced" })
                         }
-                        
                       ></input>
                       Divorced
                     </label>
                   </div>
-                  <div>
-                    <p>{this.state.matrimonyError}</p>
-                  </div>
+                </Col>
+                <Col md="12">
+                  <div className="error">{this.state.matrimonyError}</div>
                 </Col>
               </Row>
               {this.state.matrimony === "married" ? (
@@ -313,7 +301,7 @@ export default class StepOne extends Component {
                       value={this.state.anniversary}
                       onChange={this.handleAll1}
                     />
-                    <p>{this.state.mobilenoError}</p>
+                    <div className="error">{this.state.matrimonyError}</div>
                   </Col>
                 </Row>
               ) : null}
@@ -326,10 +314,9 @@ export default class StepOne extends Component {
                     name="mobileno"
                     value={this.state.mobileno}
                     onChange={this.handleAll1}
-                    
                     placeholder="Enter Number"
                   />
-                  <p>{this.state.mobilenoError}</p>
+                  <div className="error">{this.state.mobilenoError}</div>
                 </Col>
               </Row>
 
@@ -341,9 +328,8 @@ export default class StepOne extends Component {
                     name="dateofjoining"
                     value={this.state.dateofjoining}
                     onChange={this.handleAll1}
-                    
                   />
-                  <p>{this.state.dateofjoiningError}</p>
+                  <div className="error">{this.state.dateofjoiningError}</div>
                 </Col>
               </Row>
 
@@ -354,7 +340,6 @@ export default class StepOne extends Component {
                     name="presentaddress"
                     value={this.state.presentaddress}
                     onChange={this.handleAll1}
-                   
                   ></textarea>
                 </Col>
               </Row>
@@ -366,15 +351,18 @@ export default class StepOne extends Component {
                     name="permanentaddress"
                     value={this.state.permanentaddress}
                     onChange={this.handleAll1}
-                   
                   ></textarea>
                 </Col>
               </Row>
 
               <Row className="mt-5">
                 <Col className="text-center">
-                  <button type="submit" onClick={this.submit}>
-                    Next
+                  <button
+                    className="btn btn-dark"
+                    type="submit"
+                    onClick={this.submit}
+                  >
+                    Save & Next
                   </button>
                 </Col>
               </Row>

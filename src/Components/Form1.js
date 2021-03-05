@@ -7,7 +7,7 @@ import StepThree from "./StepFour";
 import StepTwo from "./StepTwo";
 import StepFour from "./StepThree";
 import Thankyou from "./Thankyou";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 // import Complete from "./Complete";
 import axios from "axios";
 
@@ -43,13 +43,13 @@ export default class Form1 extends Component {
     this.setState({ type: "stepfour", Form3: item });
   };
 
-  stepfourtofive = (item) => {
-    this.setState({ type: "thankyou", Form4: item });
-  };
+  // stepfourtofive = (item) => {
+  //   this.setState({ type: "thankyou", Form4: item });
+  // };
 
-  thanktocomp = (item) => {
-    this.setState({ type: "complete", Form5: item });
-  };
+  // thanktocomp = (item) => {
+  //   this.setState({ type: "complete", Form5: item });
+  // };
 
   finalsubmit = (e) => {
     e.preventDefault();
@@ -66,7 +66,7 @@ export default class Form1 extends Component {
       dateofjoining: "",
       permanentaddress: "",
       presentaddress: "",
-      photo: "",
+      photo: this.state.Form1.photo,
       highschool: "",
       highersecondry: "",
       graduation: "",
@@ -92,12 +92,14 @@ export default class Form1 extends Component {
         //   data: data,
         // })
         .then((result) => {
-          console.log(result)
+          console.log(result);
         });
     } catch (error) {
       console.log(error);
     }
+    this.props.history.push("/thankyou");
   };
+
   render() {
     return (
       <>
@@ -161,7 +163,6 @@ export default class Form1 extends Component {
                   <li>
                     <NavLink
                       to="#"
-                      // onClick={this.ChangeTab("stepfour")}
                       activeClassName={
                         this.state.type === "stepfour" ? "stepactive" : ""
                       }
@@ -172,7 +173,6 @@ export default class Form1 extends Component {
                   <li>
                     <NavLink
                       to="#"
-                      // onClick={this.ChangeTab("thankyou")}
                       activeClassName={
                         this.state.type === "thankyou" ? "stepactive" : ""
                       }
@@ -213,27 +213,11 @@ export default class Form1 extends Component {
               <StepThree
                 finalsubmit={this.finalsubmit}
                 formValue={this.state.Form3}
-                stepfourtofive={this.stepfourtofive}
-                // onClickn1={this.onClickn1}
+                // onClick={<Link to="/thankyou" />}
               />
             ) : (
               ""
             )}
-            {this.state.type === "thankyou" ? (
-              <Thankyou
-              // formValue={this.state.Form4}
-              // thanktocomp={this.thanktocomp}
-              // onClickn1={this.onClickn1};
-              />
-            ) : (
-              ""
-            )}
-
-            {/* {this.state.type === "complete" ? (
-              <Complete formValue={this.state.Form5 } />
-            ) : (
-              ""
-            )} */}
           </form>
         </div>
       </>

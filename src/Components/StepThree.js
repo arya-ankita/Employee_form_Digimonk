@@ -82,6 +82,7 @@ export default class StepThree extends Component {
             <Row className="mt-5">
               <Col className="text-center">
                 <button
+                  className="btn btn-dark"
                   onClick={() =>
                     this.props.stepthreetofour({
                       step3Data: this.state,

@@ -6,7 +6,7 @@ export default class Complete extends Component {
   render() {
     return (
       <>
-        {/* <div className="overbox">
+        <div className="overbox">
           <Container className="container1">
             <div class="moon">
               <div class="craters"></div>
@@ -21,9 +21,7 @@ export default class Complete extends Component {
               </font>
             </div>
           </Container>
-        </div> */}
-
-        
+        </div>
       </>
     );
   }

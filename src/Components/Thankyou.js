@@ -1,72 +1,40 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 export default class Thankyou extends Component {
-  componentDidMount = () => {
-    console.log(this.props);
-  };
-
-  handleAll1 = (event) => {
-    this.setState({ [event.target.name]: [event.target.value] });
-  };
-
   render() {
     return (
       <>
-        <section>
-          <Container>
-            <Row>
-              <Col className="col-md-3">
-                <div className="checklsbel">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="check"
-                      // value={this.state.check}
-                      onChange={this.handleAll1}
-                    ></input>
-                    Company email-id
-                  </label>
-                </div>
-              </Col>
+        <div className="loginBox pt-5 pb-5">
+          <div className="checklsbel">
+            <label>
+              <CancelIcon />
+              Company email-id
+            </label>
+          </div>
 
-              <Col className="col-md-3">
-                <div className="checklsbel">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="check2"
-                      value={this.state.check2}
-                      onChange={this.handleAll1}
-                    ></input>
-                    Password
-                  </label>
-                </div>
-              </Col>
+          <div className="checklsbel">
+            <label>
+              <CancelIcon />
+              Password
+            </label>
+          </div>
 
-              <Col className="col-md-3">
-                <div className="checklsbel">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="check3"
-                      value={this.state.check3}
-                      onChange={this.handleAll1}
-                    ></input>
-                    Nitara-id
-                  </label>
-                </div>
-              </Col>
-            </Row>
+          <div className="checklsbel">
+            <label>
+              <CancelIcon />
+              Nitara-id
+            </label>
+          </div>
 
-            <Row className="mt-5">
+          {/* <Row className="mt-5">
               <Col className="text-center">
                 <input type="submit" onClick={this.onClickn1}></input>
               </Col>
-            </Row>
-          </Container>
-        </section>
+            </Row> */}
+        </div>
       </>
     );
   }
